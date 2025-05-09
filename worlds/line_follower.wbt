@@ -1,0 +1,83 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "../protos/TrackOne.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/WoodenBox.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.24713605961948304 -0.29132329485418823 -0.9241506943735178 4.797887604328707
+  position -0.2979315241486769 -1.6161281602524478 1.0138680151882133
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+  floorAppearance PBRAppearance {
+    roughness 1
+    roughnessMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/parquetry/chequered_parquetry_roughness.jpg"
+      ]
+    }
+    metalness 0
+    normalMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/parquetry/chequered_parquetry_normal.jpg"
+      ]
+    }
+    occlusionMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/parquetry/chequered_parquetry_occlusion.jpg"
+      ]
+    }
+  }
+}
+E-puck {
+  hidden position_0_0 4072.4326418785595
+  hidden position_0_1 3581.955147796882
+  hidden linearVelocity_0 0.08547993672876113 -0.022865956085166443 3.265597275687858e-06
+  hidden angularVelocity_0 0.00010919017310098006 -9.318053198284767e-05 -0.4048020111240319
+  hidden rotation_1 0 1 0 0.9285628261874425
+  hidden linearVelocity_1 0.09566424043626089 -0.02559038192893806 -1.1992773261582417e-06
+  hidden angularVelocity_1 1.2916284397067082 4.8302327060377355 -0.4283119940774224
+  hidden rotation_2 0 1 0 0.5395227045178097
+  hidden linearVelocity_2 0.07530711599722544 -0.020138040518935883 -7.729590132399195e-07
+  hidden angularVelocity_2 0.9965190681689117 3.7147714293114054 -0.4219350193869236
+  translation -0.26178974488417817 0.20567935630012085 -7.408154505434382e-05
+  rotation -0.005630868804849279 0.0007964421634563118 -0.9999838293674468 0.27036244167271556
+  controller "line_follower_obstacle_detect"
+  camera_rotation 0 1 0 0.6545003061004253
+  groundSensorsSlot [
+    DistanceSensor {
+      translation 0 0.01 0
+      rotation 0 1 0 1.5707996938995747
+      name "ir1"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 -0.01 0
+      rotation 0 1 0 1.5707996938995747
+      name "ir0"
+      type "infra-red"
+    }
+  ]
+}
+WoodenBox {
+  hidden linearVelocity_0 3.821612034257554e-17 -1.7055341795571272e-16 5.684735393548522e-17
+  hidden angularVelocity_0 4.737973880783913e-15 1.4210847412341604e-15 3.341027896215458e-16
+  translation -0.29214941569194025 0.4774832757736087 0.037107599999999984
+  rotation 0.9998640284552391 -0.011660287330521683 -0.011660287330521763 1.570932307584206
+  size 0.075 0.075 0.075
+  mass 1
+}
+TrackOne {
+  translation 0 0 0.0075
+  rotation 1 0 0 -1.5707950010791611
+}
